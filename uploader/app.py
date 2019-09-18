@@ -1,10 +1,13 @@
 import requests
+import uuid
 
-FILE = './payload.txt'
+FILE = './codmw.jpg'
 TARGET = 'http://localhost:8000'
 
+name = str(uuid.uuid4())
+
 files = [
-    ('docfile', (FILE, open(FILE, 'rb'), 'application/octet'))
+    (name, (FILE, open(FILE, 'rb'), 'image/jpeg'))
 ]
 
 resp = requests.post(TARGET, files=files)
