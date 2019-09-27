@@ -15,4 +15,7 @@ if (isset($_FILES)) {
             else echo "something went wrong";
         }
     }
+    else {
+        echo "ERROR: Too many files uploaded at once.";
+    }
 }
