@@ -1,6 +1,8 @@
 <?php
 
+# Create the directory for first-time use
 $UPLOAD_DIR = "uploads/";
+
 
 if (isset($_FILES)) {
     // var_dump($_FILES);
